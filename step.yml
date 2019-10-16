@@ -64,7 +64,7 @@ inputs:
       is_expand: true
       is_required: true
       value_options: []
-  - code_sign_style: 
+  - code_sign_style: Automatic
     opts:
       title: "Code Sign Style"
       summary: "The **CODE__SIGN__STYLE** value will be replaced."
