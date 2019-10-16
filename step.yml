@@ -8,14 +8,14 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  CodeSigningSettingPatch
+  Code Signing Setting Patch
 summary: |
   Patch xcode's signing config for specific key and provisioning profile
 description: |
   Patch xcode's signing config for specific key and provisioning profile
-website: https://github.com/j796160836/bitrise-step-codesigningsettingpatch
-source_code_url: https://github.com/j796160836/bitrise-step-codesigningsettingpatch
-support_url: https://github.com/j796160836/bitrise-step-codesigningsettingpatch/issues
+website: https://github.com/j796160836/bitrise-step-code-signing-setting-patch
+source_code_url: https://github.com/j796160836/bitrise-step-code-signing-setting-patch
+support_url: https://github.com/j796160836/bitrise-step-code-signing-setting-patch/issues
 host_os_tags:
   - osx-10.10
 project_type_tags:

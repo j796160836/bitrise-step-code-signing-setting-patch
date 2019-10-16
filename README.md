@@ -1,4 +1,4 @@
-# CodeSigningSettingPatch
+# Code Signing Setting Patch
 
 Patch xcode's automatic signing config into specific key and provisioning profile
 
