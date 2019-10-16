@@ -5,7 +5,7 @@ app:
   envs:
   # If you want to share this step into a StepLib
   - BITRISE_STEP_ID: code-signing-setting-patch
-  - BITRISE_STEP_VERSION: "1.0.0"
+  - BITRISE_STEP_VERSION: "1.0.1"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/j796160836/bitrise-step-code-signing-setting-patch.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/j796160836/bitrise-steplib
 
@@ -59,7 +59,7 @@ workflows:
       # if you want to share this step into a StepLib
       - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/j796160836/bitrise-steplib
       - BITRISE_STEP_ID: code-signing-setting-patch
-      - BITRISE_STEP_VERSION: "1.0.0"
+      - BITRISE_STEP_VERSION: "1.0.1"
       - BITRISE_STEP_GIT_CLONE_URL: "https://github.com/j796160836/bitrise-step-code-signing-setting-patch.git"
     description: |-
       If this is the first time you try to share a Step you should
