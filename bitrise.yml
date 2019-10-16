@@ -36,10 +36,10 @@ workflows:
         - xcode_pbxproj_file: "MyAwesomeProject.xcodeproj/project.pbxproj"
         - project_target: "MyAwesomeProjectDEV"
         - code_sign_style: "Manual"
-        - release_development_team: ""
+        - release_development_team: "ABCDEFGHIJ"
         - release_code_sign_identity: "iPhone Distribution"
         - release_provisioning_profile_specifier: "MyAwesomeProjectDEV_Development"
-        - debug_development_team: ""
+        - debug_development_team: "ABCDEFGHIJ"
         - debug_code_sign_identity: "iPhone Distribution"
         - debug_provisioning_profile_specifier: "MyAwesomeProjectDEV_store"
 

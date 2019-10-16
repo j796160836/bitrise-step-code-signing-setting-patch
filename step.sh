@@ -24,11 +24,6 @@ if [ -z "${code_sign_style}" ] ; then
   exit 1
 fi
 
-if [ -z "${release_development_team}" ] ; then
-  echo " [!] Missing required input: release_development_team"
-  exit 1
-fi
-
 if [ -z "${release_code_sign_identity}" ] ; then
   echo " [!] Missing required input: release_code_sign_identity"
   exit 1
@@ -36,11 +31,6 @@ fi
 
 if [ -z "${release_provisioning_profile_specifier}" ] ; then
   echo " [!] Missing required input: release_provisioning_profile_specifier"
-  exit 1
-fi
-
-if [ -z "${debug_development_team}" ] ; then
-  echo " [!] Missing required input: debug_development_team"
   exit 1
 fi
 

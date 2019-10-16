@@ -70,9 +70,10 @@ inputs:
       title: "Development Team (Release)"
       summary: "The release target of DEVELOPMENT_TEAM value will be replaced."
       description: |
-        The *release target* of `DEVELOPMENT_TEAM` value will be replaced.
+        The *release target* of `DEVELOPMENT_TEAM` value will be replaced.  
+        Left blank means `None`.
       is_expand: true
-      is_required: true
+      is_required: false
       value_options: []
   - release_code_sign_identity: 
     opts:
@@ -101,9 +102,10 @@ inputs:
       title: "Development Team (Debug)"
       summary: "The debug target of DEVELOPMENT_TEAM value will be replaced."
       description: |
-        The *debug target* of `DEVELOPMENT_TEAM` value will be replaced.
+        The *debug target* of `DEVELOPMENT_TEAM` value will be replaced.  
+        Left blank means `None`.
       is_expand: true
-      is_required: true
+      is_required: false
       value_options: []
   - debug_code_sign_identity: 
     opts:

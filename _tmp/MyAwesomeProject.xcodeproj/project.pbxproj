@@ -131,7 +131,6 @@
 				CA80218CF38410A183582FEF /* Pods-MyAwesomeProjectUITests.debug.xcconfig */,
 				63E4C4A0E4353FA59FDD5BAE /* Pods-MyAwesomeProjectUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -630,7 +629,7 @@
 			baseConfigurationReference = 581904849A67E7CDB85C24A0 /* Pods-MyAwesomeProjectShared-MyAwesomeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = MyAwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -639,6 +638,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnny.MyAwesomeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -649,7 +649,7 @@
 			baseConfigurationReference = BF36B2A886885880DCEA285D /* Pods-MyAwesomeProjectShared-MyAwesomeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = MyAwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -658,6 +658,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnny.MyAwesomeProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -754,7 +755,8 @@
 			baseConfigurationReference = 57974362F81CB6C4F60BC01C /* Pods-MyAwesomeProjectShared-MyAwesomeProjectDEV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = "$(SRCROOT)/MyAwesomeProject/Info-dev.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -763,6 +765,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnny.MyAwesomeProject.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -773,7 +776,8 @@
 			baseConfigurationReference = C749C61DCA45502AD59D4D48 /* Pods-MyAwesomeProjectShared-MyAwesomeProjectDEV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = "$(SRCROOT)/MyAwesomeProject/Info-dev.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -782,6 +786,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnny.MyAwesomeProject.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
