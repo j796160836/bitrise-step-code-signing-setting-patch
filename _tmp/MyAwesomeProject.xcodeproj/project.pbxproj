@@ -629,7 +629,8 @@
 			baseConfigurationReference = 581904849A67E7CDB85C24A0 /* Pods-MyAwesomeProjectShared-MyAwesomeProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = MyAwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -649,7 +650,8 @@
 			baseConfigurationReference = BF36B2A886885880DCEA285D /* Pods-MyAwesomeProjectShared-MyAwesomeProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = MyAwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -756,7 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = "$(SRCROOT)/MyAwesomeProject/Info-dev.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -777,7 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XXXXXXXXXX;
 				INFOPLIST_FILE = "$(SRCROOT)/MyAwesomeProject/Info-dev.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

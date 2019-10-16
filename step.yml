@@ -27,23 +27,31 @@ project_type_tags:
   - ionic
 type_tags:
   - utility
+  - code-sign
+  - pbxproj
+  - xcodeproj
 
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
 run_if: ""
 
+deps:
+  gem:
+  - name: xcodeproj
+
 toolkit:
   bash:
     entry_file: step.sh
 
 inputs:
-  - xcode_pbxproj_file: 
+  - xcode_xcodeproj_file: 
     opts:
-      title: "Xcode project.pbxproj File Path"
-      summary: "Your project.pbxproj file path."
+      title: "Xcode project.xcodeproj Path"
+      summary: "Your project.xcodeproj file path."
       description: |
-        Your project.pbxproj file path. (e.g. MyAwesomeProject/MyAwesomeProject.xcodeproj/project.pbxproj)
+        Your project.xcodeproj file path. (e.g. MyAwesomeProject/MyAwesomeProject.xcodeproj)  
+        Even if provide `.xcodeproj` path even if using `.xcworkspace`.
       is_expand: true
       is_required: true
       value_options: []
@@ -59,50 +67,20 @@ inputs:
   - code_sign_style: 
     opts:
       title: "Code Sign Style"
-      summary: "The CODE_SIGN_STYLE value will be replaced."
+      summary: "The **CODE__SIGN__STYLE** value will be replaced."
       description: |
-        The `CODE_SIGN_STYLE` value will be replaced. Value either `Automatic` or `Manual`.
+        The **CODE__SIGN__STYLE** value will be replaced.  
+        Value either `Automatic` or `Manual`.
       is_expand: true
       is_required: true
       value_options: ["Automatic", "Manual"]
-  - release_development_team: 
-    opts:
-      title: "Development Team (Release)"
-      summary: "The release target of DEVELOPMENT_TEAM value will be replaced."
-      description: |
-        The *release target* of `DEVELOPMENT_TEAM` value will be replaced.  
-        Left blank means `None`.
-      is_expand: true
-      is_required: false
-      value_options: []
-  - release_code_sign_identity: 
-    opts:
-      title: "Code Sign Identity (Release)"
-      summary: "The release target of CODE_SIGN_IDENTITY value will be replaced."
-      description: |
-        The *release target* of `CODE_SIGN_IDENTITY` value will be replaced.   
-        Value will be `iPhone Developer`, `iPhone Distribution` or others.
-      is_expand: true
-      is_required: true
-      value_options: []
-  - release_provisioning_profile_specifier: 
-    opts:
-      title: "Provisioning Profile Specifier (Release)"
-      summary: "The release target of PROVISIONING_PROFILE_SPECIFIER value will be replaced."
-      description: |
-        The *release target* of `PROVISIONING_PROFILE_SPECIFIER` value will be replaced.  
-        Please specify the provisioning profile name which is same as one created at *Certificates, Identifiers & Profiles* at *Apple Developer Program*.  
-        Don't foget to upload that provisioning profile file.
-      is_expand: true
-      is_required: true
-      value_options: []
 
   - debug_development_team: 
     opts:
       title: "Development Team (Debug)"
-      summary: "The debug target of DEVELOPMENT_TEAM value will be replaced."
+      summary: "The **debug configurations** of **DEVELOPMENT_TEAM** value will be replaced."
       description: |
-        The *debug target* of `DEVELOPMENT_TEAM` value will be replaced.  
+        The **debug configurations** of **DEVELOPMENT_TEAM** value will be replaced.  
         Left blank means `None`.
       is_expand: true
       is_required: false
@@ -110,9 +88,9 @@ inputs:
   - debug_code_sign_identity: 
     opts:
       title: "Code Sign Identity (Debug)"
-      summary: "The debug target of CODE_SIGN_IDENTITY value will be replaced."
+      summary: "The **debug configurations** of **CODE__SIGN__IDENTITY** value will be replaced."
       description: |
-        The *debug target* of `CODE_SIGN_IDENTITY` value will be replaced.   
+        The **debug configurations** of **CODE__SIGN__IDENTITY** value will be replaced.   
         Value will be `iPhone Developer`, `iPhone Distribution` or others.
       is_expand: true
       is_required: true
@@ -120,10 +98,42 @@ inputs:
   - debug_provisioning_profile_specifier: 
     opts:
       title: "Provisioning Profile Specifier (Debug)"
-      summary: "The debug target of PROVISIONING_PROFILE_SPECIFIER value will be replaced."
+      summary: "The **debug configurations** of **PROVISIONING__PROFILE__SPECIFIER** value will be replaced."
       description: |
-        The *debug target* of `PROVISIONING_PROFILE_SPECIFIER` value will be replaced.
-        Please specify the provisioning profile name which is same as one created at *Certificates, Identifiers & Profiles* at *Apple Developer Program*.  
+        The **debug configurations** of **PROVISIONING__PROFILE__SPECIFIER** value will be replaced.  
+        Please specify the provisioning profile name which is same as one created at **Certificates, Identifiers & Profiles** at **Apple Developer Program**.  
+        Don't foget to upload that provisioning profile file.
+      is_expand: true
+      is_required: true
+      value_options: []
+
+  - release_development_team: 
+    opts:
+      title: "Development Team (Release)"
+      summary: "The **release configurations** of **DEVELOPMENT_TEAM** value will be replaced."
+      description: |
+        The **release configurations** of **DEVELOPMENT_TEAM** value will be replaced.  
+        Left blank means `None`.
+      is_expand: true
+      is_required: false
+      value_options: []
+  - release_code_sign_identity: 
+    opts:
+      title: "Code Sign Identity (Release)"
+      summary: "The **release configurations** of **CODE__SIGN__IDENTITY** value will be replaced."
+      description: |
+        The **release configurations** of **CODE__SIGN__IDENTITY** value will be replaced.   
+        Value will be `iPhone Developer`, `iPhone Distribution` or others.
+      is_expand: true
+      is_required: true
+      value_options: []
+  - release_provisioning_profile_specifier: 
+    opts:
+      title: "Provisioning Profile Specifier (Release)"
+      summary: "The **release configurations** of **PROVISIONING__PROFILE__SPECIFIER** value will be replaced."
+      description: |
+        The **release configurations** of **PROVISIONING__PROFILE__SPECIFIER** value will be replaced.  
+        Please specify the provisioning profile name which is same as one created at **Certificates, Identifiers & Profiles** at **Apple Developer Program**.  
         Don't foget to upload that provisioning profile file.
       is_expand: true
       is_required: true
