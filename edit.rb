@@ -11,6 +11,7 @@ $release_provisioning_profile_specifier = ENV['release_provisioning_profile_spec
 $debug_development_team = ENV['debug_development_team']
 $debug_code_sign_identity = ENV['debug_code_sign_identity']
 $debug_provisioning_profile_specifier = ENV['debug_provisioning_profile_specifier']
+$dry_run = (ENV['dry_run'].to_s == "true")
 
 project = Xcodeproj::Project.open($xcode_xcodeproj_file)
 
@@ -41,10 +42,10 @@ def getBuildSettingsStrings(project, target_name, configuration_name)
 
 	result = ""
 	result += "Build Configuration: " + configuration_name + "\n"
-	result += "CODE_SIGN_STYLE: " + settings["CODE_SIGN_STYLE"] + "\n"
-	result += "DEVELOPMENT_TEAM: " + settings["DEVELOPMENT_TEAM"] + "\n"
-	result += "CODE_SIGN_IDENTITY: " + settings["CODE_SIGN_IDENTITY"] + "\n"
-	result += "PROVISIONING_PROFILE_SPECIFIER: " + settings["PROVISIONING_PROFILE_SPECIFIER"]
+	result += "CODE_SIGN_STYLE: " + settings["CODE_SIGN_STYLE"].to_s + "\n"
+	result += "DEVELOPMENT_TEAM: " + settings["DEVELOPMENT_TEAM"].to_s + "\n"
+	result += "CODE_SIGN_IDENTITY: " + settings["CODE_SIGN_IDENTITY"].to_s + "\n"
+	result += "PROVISIONING_PROFILE_SPECIFIER: " + settings["PROVISIONING_PROFILE_SPECIFIER"].to_s
 	return result
 end
 
@@ -78,8 +79,10 @@ releaseSettings["CODE_SIGN_IDENTITY"] = $release_code_sign_identity
 releaseSettings["PROVISIONING_PROFILE_SPECIFIER"] = $release_provisioning_profile_specifier
 
 puts
-puts "\# Changed Settings:"
+puts "\# Changed Settings" + ($dry_run ? " (Dry-run preview. setting not saved)" : "") + ":"
 
 printAllBuildSettings(project, $project_target)
 
-project.save
+if !$dry_run
+	project.save
+end

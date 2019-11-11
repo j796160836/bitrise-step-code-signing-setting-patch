@@ -44,6 +44,10 @@ if [ -z "${release_provisioning_profile_specifier}" ] ; then
   exit 1
 fi
 
+if [ -z "${dry_run}" ] ; then
+  echo " [!] Missing required input: dry_run"
+  exit 1
+fi
 
 # ---------------------
 # --- Configs:
@@ -59,6 +63,9 @@ echo
 echo " (i) Provided Development Team (Release)               : ${release_development_team}"
 echo " (i) Provided Code Sign Identity (Release)             : ${release_code_sign_identity}"
 echo " (i) Provided Provisioning Profile Specifier (Release) : ${release_provisioning_profile_specifier}"
+echo
+echo " (i) Dry-run preview                                   : ${dry_run}"
+
 
 
 THIS_SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
