@@ -128,7 +128,7 @@ inputs:
       is_required: true
       value_options: []
 
-  - dry_run:
+  - dry_run: false
     opts:
       title: "Dry-run preview (settings preview)"
       summary: "If set this value `true`, it will Dry-run this steps to preview the signing settings."
