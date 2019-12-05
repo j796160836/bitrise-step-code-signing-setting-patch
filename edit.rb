@@ -11,7 +11,7 @@ $release_provisioning_profile_specifier = ENV['release_provisioning_profile_spec
 $debug_development_team = ENV['debug_development_team']
 $debug_code_sign_identity = ENV['debug_code_sign_identity']
 $debug_provisioning_profile_specifier = ENV['debug_provisioning_profile_specifier']
-$dry_run = (ENV['dry_run'].to_s == "true")
+$dry_run = (ENV['dry_run'].to_s == "yes")
 
 project = Xcodeproj::Project.open($xcode_xcodeproj_file)
 

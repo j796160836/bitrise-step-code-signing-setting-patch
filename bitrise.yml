@@ -86,4 +86,4 @@ workflows:
         - release_development_team: FGHIJABCDE
         - release_code_sign_identity: iPhone Distribution
         - release_provisioning_profile_specifier: MyAwesomeProjectDEV_store
-        - dry_run: "false"
+        - dry_run: "no"
