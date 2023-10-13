@@ -17,7 +17,7 @@ $dry_run = (ENV['dry_run'].to_s == "yes")
 
 project = Xcodeproj::Project.open($xcode_xcodeproj_file)
 
-$CONFIGURATION_NAMES = [debug_development_configuration, $release_configuration]
+$CONFIGURATION_NAMES = [$debug_development_configuration, $release_configuration]
 
 def getTarget(project, name)
 	project.targets.each do |target|
