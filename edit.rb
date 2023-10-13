@@ -5,7 +5,7 @@ require 'xcodeproj'
 $xcode_xcodeproj_file = ENV['xcode_xcodeproj_file']
 $project_target = ENV['project_target']
 $code_sign_style = ENV['code_sign_style']
-$release_configuration = ENV['release_development_configuration']
+$release_configuration = ENV['release_configuration']
 $release_development_team = ENV['release_development_team']
 $release_code_sign_identity = ENV['release_code_sign_identity']
 $release_provisioning_profile_specifier = ENV['release_provisioning_profile_specifier']
