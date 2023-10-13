@@ -80,9 +80,11 @@ workflows:
         - xcode_xcodeproj_file: MyAwesomeProject.xcodeproj
         - project_target: MyAwesomeProjectDEV
         - code_sign_style: Manual
+        - debug_development_configuration: Debug
         - debug_development_team: ABCDEFGHIJ
         - debug_code_sign_identity: iPhone Developer
         - debug_provisioning_profile_specifier: MyAwesomeProjectDEV_Development
+        - release_configuration: Release
         - release_development_team: FGHIJABCDE
         - release_code_sign_identity: iPhone Distribution
         - release_provisioning_profile_specifier: MyAwesomeProjectDEV_store
