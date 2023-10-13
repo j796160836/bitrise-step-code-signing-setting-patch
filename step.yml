@@ -64,17 +64,27 @@ inputs:
       is_required: true
       value_options: ["Automatic", "Manual"]
 
-  - debug_development_team: 
+  - debug_development_configuration:
+    opts:
+      title: "Development Configuration (Debug)"
+      summary: "The **debug configuration** value will be replaced."
+      description: |
+        The **debug configuration** value will be replaced.
+        Please set your value, or by default you have to use `Debug`.
+      is_expand: true
+      is_required: true
+      value_options: []
+  - debug_development_team:
     opts:
       title: "Development Team (Debug)"
       summary: "The **debug configurations** of **DEVELOPMENT_TEAM** value will be replaced."
       description: |
-        The **debug configurations** of **DEVELOPMENT_TEAM** value will be replaced.  
+        The **debug configurations** of **DEVELOPMENT_TEAM** value will be replaced.
         Left blank means `None`.
       is_expand: true
       is_required: false
       value_options: []
-  - debug_code_sign_identity: 
+  - debug_code_sign_identity:
     opts:
       title: "Code Sign Identity (Debug)"
       summary: "The **debug configurations** of **CODE__SIGN__IDENTITY** value will be replaced."
@@ -96,7 +106,17 @@ inputs:
       is_required: true
       value_options: []
 
-  - release_development_team: 
+  - release_configuration:
+    opts:
+      title: "Release Configuration (Release)"
+      summary: "The **release configuration** value will be replaced."
+      description: |
+        The **release configuration** value will be replaced.
+        Please set your value, or by default you have to use `Release`.
+      is_expand: true
+      is_required: true
+      value_options: []
+  - release_development_team:
     opts:
       title: "Development Team (Release)"
       summary: "The **release configurations** of **DEVELOPMENT_TEAM** value will be replaced."
