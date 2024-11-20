@@ -4,7 +4,7 @@ project_type: ""
 app:
   envs:
   - BITRISE_STEP_ID: code-signing-setting-patch
-  - BITRISE_STEP_VERSION: 1.0.4
+  - BITRISE_STEP_VERSION: 1.0.5
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/j796160836/bitrise-step-code-signing-setting-patch.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:j796160836/bitrise-steplib.git
 workflows:
@@ -43,7 +43,7 @@ workflows:
     envs:
     - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:j796160836/bitrise-steplib.git
     - BITRISE_STEP_ID: code-signing-setting-patch
-    - BITRISE_STEP_VERSION: 1.0.4
+    - BITRISE_STEP_VERSION: 1.0.5
     - BITRISE_STEP_GIT_CLONE_URL: https://github.com/j796160836/bitrise-step-code-signing-setting-patch.git
     steps:
     - script:
